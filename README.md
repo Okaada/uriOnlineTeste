@@ -49,3 +49,59 @@ public class Program {
 	}
 
 }
+
+////////////////CLASSE
+
+package entities;
+
+public class Products {
+	
+	private int codProduto;
+	private int quantProduto;
+	private double valorProduto;
+	
+	public Products(double valorProduto, int quantProduto) {
+
+		this.quantProduto = quantProduto;
+
+		this.valorProduto = valorProduto;
+	}
+
+	public Products(int codProduto, int quantProduto) {
+		this.quantProduto = quantProduto;
+		this.codProduto = codProduto;
+		
+	}
+
+	
+	public int getCodProduto() {
+		return codProduto;
+	}
+
+
+	public int getQuantProduto() {
+		return quantProduto;
+	}
+
+
+	public double getValorProduto() {
+		return valorProduto;
+	}
+
+
+	public double somaFinal() {
+		
+		return this.quantProduto * this.valorProduto;
+		
+	}
+	
+	public String toString() {
+		
+		return "Total: R$ "+
+				String.format("%.2f", somaFinal());
+		
+	}
+
+}
+
+
